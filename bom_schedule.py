@@ -2,8 +2,8 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import requests
-import matplotlib.pyplot as plt
-import seaborn as sns
+# import matplotlib.pyplot as plt
+# import seaborn as sns
 
 BOM_URL = 'https://raw.githubusercontent.com/bcbooks/scriptures-json/master/book-of-mormon.json'
 
@@ -155,10 +155,10 @@ metric_row({
     'Chapters per Day': '{:.2f}'.format((schedule.chapters / schedule.days).mean()),
 })
 
-fig, (ax1, ax2) = plt.subplots(ncols=2, sharey=True, figsize=(8, 2))
-sns.histplot(data=schedule, y='avg_versus', kde=True, ax=ax1)
-sns.scatterplot(data=schedule.reset_index().rename(columns={'index':'day'}), x='day', y='avg_versus', ax=ax2)
-st.write(fig)
+# fig, (ax1, ax2) = plt.subplots(ncols=2, sharey=True, figsize=(8, 2))
+# sns.histplot(data=schedule, y='avg_versus', kde=True, ax=ax1)
+# sns.scatterplot(data=schedule.reset_index().rename(columns={'index':'day'}), x='day', y='avg_versus', ax=ax2)
+# st.write(fig)
 
 st.subheader('Schedule')
 st.dataframe(pd.DataFrame({
