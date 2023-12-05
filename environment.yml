@@ -1,8 +1,0 @@
-name: bom-schedule
-dependencies:
-  - numpy
-  - pandas
-  - matplotlib
-  - seaborn
-  - streamlit
-  - requests
